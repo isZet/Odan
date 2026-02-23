@@ -1104,6 +1104,7 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
     border: 1px solid rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .work-image-item:hover {
@@ -1116,6 +1117,7 @@ section {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

@@ -166,6 +166,12 @@
     </div>
 
 </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-img" src="" alt="Enlarged Image">
+    </div>
+
     </section>
 
     <div class="main-footer">
@@ -180,6 +186,31 @@
         </div>
     </div>
 
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
+    <script>
+        // Lightbox functionality for service images
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.querySelector('.lightbox-img');
+        const closeBtn = document.querySelector('.lightbox .close');
+        const allWorkImages = document.querySelectorAll('.work-image-item img');
+
+        allWorkImages.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
