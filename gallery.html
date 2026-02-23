@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Mike O. Rebanal - Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* FOOTER STYLES */
+        .main-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #4a90e2, #7ec8e3); 
+            color: white;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0.8rem 3rem;
+            box-sizing: border-box;
+            z-index: 2000; 
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1); 
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .social-icons a {
+            color: white;
+            margin-left: 1.2rem;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: #e6f7ff; 
+            transform: scale(1.2);
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+        }
+
+        /* --- DATE BADGE STYLES --- */
+        .image-item { position: relative; }
+
+        .image-date {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7); 
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            pointer-events: none; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            backdrop-filter: blur(2px);
+            z-index: 5;
+        }
+
+        @media (max-width: 768px) {
+            .main-footer {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+                text-align: center;
+            }
+            .gallery-section { padding-bottom: 90px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+    <div class="nav-logo">ODAN</div>
+    
+    <ul id="main-nav-list"> 
+        <li><a href="index.html#home">HOME</a></li>
+        <li><a href="index.html#about">ABOUT</a></li>
+        <li><a href="services.html">SERVICES</a></li> 
+        <li><a href="gallery.html" class="active">GALLERY</a></li>
+        <li><a href="reviews.html">REVIEWS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+</nav>
+
+    <section id="gallery" class="gallery-section">
+        <h2 class="reveal">My Personal Gallery</h2>
+        <p class="reveal">Explore different sides of my life. Click a category below.</p>
+
+        <div class="gallery-categories reveal">
+            
+            <div class="gallery-cat-card active" onclick="switchGallery('normal', this)">
+                <div class="cat-icon"><i class="fa-solid fa-user"></i></div>
+                <div class="cat-info">
+                    <h3>Me as a Normal Person</h3>
+                    <p>Life behind the code. Hobbies, travel, and daily moments.</p>
+                </div>
+            </div>
+
+            <div class="gallery-cat-card" onclick="switchGallery('student', this)">
+                <div class="cat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="cat-info">
+                    <h3>Me as an IT Student</h3>
+                    <p>CNSC life, seminars, competitions, and school events.</p>
+                </div>
+            </div>
+
+            <div class="gallery-cat-card" onclick="switchGallery('projects', this)">
+                <div class="cat-icon"><i class="fa-solid fa-rocket"></i></div>
+                <div class="cat-info">
+                    <h3>Accomplished Projects</h3>
+                    <p>Websites, designs, and prototypes I've built.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="gallery-normal" class="gallery-container active-gallery reveal">
+            <h3 class="gallery-header">📸 Life & Hobbies</h3>
+            <button class="scroll-btn left" onclick="scrollGallery('normal', -1)"> &lt; </button>
+            <div class="image-gallery" id="scroll-normal">
+                
+                <div class="image-item">
+                    <img src="Me.jpg" alt="Personal Life">
+                    <div class="image-date">Aug 2025</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="Me1.jpg" alt="Travel">
+                    <div class="image-date">Oct 2025</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="Me2.jpg" alt="Hobbies">
+                    <div class="image-date">May 2025</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="Me3.jpg" alt="Friends">
+                    <div class="image-date">Sep 2025</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="Me4.jpg" alt="Friends">
+                    <div class="image-date">Aug 2025</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="Me5.jpg" alt="Friends">
+                    <div class="image-date">Mar 2025</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="Me6.jpg" alt="Friends">
+                    <div class="image-date">May 2025</div>
+                </div>
+
+            </div>
+            <button class="scroll-btn right" onclick="scrollGallery('normal', 1)"> &gt; </button>
+        </div>
+
+        <div id="gallery-student" class="gallery-container hidden-gallery reveal">
+            <h3 class="gallery-header">🎓 IT Journey</h3>
+            <button class="scroll-btn left" onclick="scrollGallery('student', -1)"> &lt; </button>
+            <div class="image-gallery" id="scroll-student">
+                
+                <div class="image-item">
+                    <img src="NextGenPH.jpg" alt="NextGenPH">
+                    <div class="image-date">Nov 2025</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="CNSC Explore 2025.jpg" alt="CNSC Explore">
+                    <div class="image-date">Oct 2025</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="IOTExpo.jpg" alt="IOT Expo">
+                    <div class="image-date">Dec 2024</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="NextGenPH2.jpg" alt="Competition">
+                    <div class="image-date">Nov 2025</div>
+                </div>
+
+            </div>
+            <button class="scroll-btn right" onclick="scrollGallery('student', 1)"> &gt; </button>
+        </div>
+
+        <div id="gallery-projects" class="gallery-container hidden-gallery reveal">
+            <h3 class="gallery-header">🚀 Featured Works</h3>
+            <button class="scroll-btn left" onclick="scrollGallery('projects', -1)"> &lt; </button>
+            <div class="image-gallery" id="scroll-projects">
+                
+                <div class="image-item">
+                    <img src="KhoVet.jpg" alt="Vet Clinic">
+                    <div class="image-date">Dec 2024</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="KaraokeDeliverySystem.png" alt="Karaoke System">
+                    <div class="image-date">May 2025</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="Dementra.png" alt="Dementra App">
+                    <div class="image-date">Nov 2025</div>
+                </div>
+
+                <div class="image-item">
+                    <img src="Daet Premium App.png" alt="UI Design">
+                    <div class="image-date">Dec 2025</div>
+                </div>
+
+                 <div class="image-item">
+                    <img src="Personal Website.png" alt="UI Design">
+                    <div class="image-date"> Dec 2025</div>
+                </div>
+
+            </div>
+            <button class="scroll-btn right" onclick="scrollGallery('projects', 1)"> &gt; </button>
+        </div>
+
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-img" src="" alt="Enlarged Image">
+        </div>
+
+    </section>
+
+    <div class="main-footer" id="mainFooter">
+    <div class="copyright">
+        &copy; 2025 Jordan Mike O. Rebanal. All rights reserved.
+    </div>
+    <div class="social-icons">
+        
+        <a href="https://www.facebook.com/share/1CfyB1ykXs/" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        
+        <a href="https://www.instagram.com/just_odann?igsh=dXBzaDlxMzNnaWQz" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        
+        <a href="mailto:jordanrebanal@gmail.com" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+        
+        <a href="https://www.tiktok.com/@just_odann?_r=1&_t=ZS-92BqxtZHK91" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+</div>
+
+    <script>
+        function switchGallery(category, cardElement) {
+            document.querySelectorAll('.gallery-container').forEach(el => {
+                el.classList.add('hidden-gallery');
+                el.classList.remove('active-gallery');
+            });
+
+            document.querySelectorAll('.gallery-cat-card').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            document.getElementById('gallery-' + category).classList.remove('hidden-gallery');
+            document.getElementById('gallery-' + category).classList.add('active-gallery');
+
+            cardElement.classList.add('active');
+        }
+
+        function scrollGallery(category, direction) {
+            const container = document.getElementById('scroll-' + category);
+            const scrollAmount = container.clientWidth / 1; 
+            container.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+        }
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.querySelector('.lightbox-img');
+        const closeBtn = document.querySelector('.close');
+        const allImages = document.querySelectorAll('.image-item img');
+
+        allImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150; 
+
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        
+        reveal();
+    </script>
+</body>
+</html>

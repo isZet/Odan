@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Mike O. Rebanal - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "q8O9sDeK7Ja0qeE-e",
+            });
+        })();
+    </script>
+
+<style>
+        /* 1. FOOTER STYLES */
+        .main-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #4a90e2, #7ec8e3); 
+            color: white;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0.8rem 3rem;
+            box-sizing: border-box;
+            z-index: 2000; 
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1); 
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .social-icons a {
+            color: white;
+            margin-left: 1.2rem;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: #e6f7ff; 
+            transform: scale(1.2);
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+        }
+
+        /*2. DESKTOP DEFAULTS (Allow page scrolling) */
+        html, body {
+            height: auto;
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .contact-section {
+            min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+            padding-top: calc(var(--nav-height) + 1rem);
+            padding-bottom: calc(var(--footer-height) + 2rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: visible;
+        }
+
+        /* TEXT STYLING (Restored Size & Fixed Background) */
+        .contact-section h2 {
+            font-size: 2.6rem !important; 
+            font-weight: 700;
+            
+            display: inline-block !important; 
+            
+            margin: 0 auto 0.8rem auto;
+            padding: 0.5rem 1.5rem; 
+            text-align: center;
+        }
+
+        .contact-section .subheading {
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            text-align: center;
+            font-size: 1.1rem; 
+            line-height: 1.6;
+        }
+
+        .contact-details-and-form {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        /* 3. MOBILE OVERRIDES (Enable Scroll) */
+        @media (max-width: 768px) {
+            
+            html, body { 
+                height: auto !important; 
+                overflow-y: auto !important; 
+                overflow-x: hidden !important;
+            }
+
+            .contact-section { 
+                height: auto !important; 
+                min-height: 100vh;
+                display: block !important; 
+                overflow: visible !important;
+                padding-top: 60px !important; 
+                padding-bottom: 150px !important; 
+            }
+            
+            .contact-section h2 {
+                display: inline-block !important;
+                width: auto !important;
+                
+                font-size: 1.3rem !important; 
+            }
+
+            .contact-section .subheading {
+                width: 90%; 
+                margin: 0 auto 2rem auto; 
+                padding: 0 1rem;
+                box-sizing: border-box;
+            }
+
+            .main-footer {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+                text-align: center;
+            }
+            
+            .contact-details-and-form {
+                flex-direction: column; 
+                align-items: center;
+                gap: 2rem;
+                padding: 0 1rem; 
+                box-sizing: border-box;
+            }
+
+            .contact-inquiry-form, .contact-box {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+    </style>
+    </head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-logo">ODAN</div>
+        
+        <ul id="main-nav-list"> 
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li> 
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="reviews.html">REVIEWS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section id="contact" class="contact-section">
+        <h2 class="reveal">Contact Me</h2>
+        
+        <p class="reveal subheading">If you want to collaborate or just say hi, feel free to reach out using the details below or send an inquiry!</p>
+        
+        <div class="contact-details-and-form">
+            
+            <form class="contact-inquiry-form reveal" id="contact-inquiry-form">
+                <h3>Send an Inquiry</h3>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="contact-box reveal">
+                <h3 class="contact-box-title">You can also reach me out!</h3>
+                <p>
+                    <i class="fa-solid fa-envelope contact-icon"></i> 
+                    <a href="mailto:jordanrebanal@gmail.com">jordanrebanal@gmail.com</a>
+                </p>
+                <p>
+                    <i class="fa-brands fa-facebook contact-icon"></i> 
+                    <a href="https://www.facebook.com/JordanMikeRebanal">Jordan Mike Rebanal</a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-phone contact-icon"></i> 
+                    <span>0905-359-6743</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="main-footer">
+        <div class="copyright">
+            &copy; 2025 Jordan Mike O. Rebanal. All rights reserved.
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/1CfyB1ykXs/" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/just_odann?igsh=dXBzaDlxMzNnaWQz" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:jordanrebanal@gmail.com" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.tiktok.com/@just_odann?_r=1&_t=ZS-92BqxtZHK91" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

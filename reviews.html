@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Mike O. Rebanal - Reviews</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+ <style>
+        /* =========================================
+           1. FOOTER STYLES
+           ========================================= */
+        .main-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #4a90e2, #7ec8e3); 
+            color: white;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0.8rem 3rem;
+            box-sizing: border-box;
+            z-index: 2000; 
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1); 
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .social-icons a {
+            color: white;
+            margin-left: 1.2rem;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: #e6f7ff; 
+            transform: scale(1.2);
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+        }
+
+        /* =========================================
+           2. DESKTOP DEFAULTS (Allow page scrolling)
+           ========================================= */
+        html, body {
+            height: auto;
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .reviews-section {
+            min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+            padding-top: calc(var(--nav-height) + 1rem);
+            padding-bottom: calc(var(--footer-height) + 2rem);
+            overflow: visible;
+        }
+        
+        .reviews-section h2 {
+            font-size: 2.6rem; 
+            font-weight: 700;
+            display: inline-block; 
+            margin: 0 auto 0.8rem auto;
+            padding-top: 0.10rem; 
+        }
+        
+        .reviews-gallery-container { 
+            margin: 0 auto 0.1rem auto !important; 
+            padding: 0 0.5rem !important; 
+            position: relative; 
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        /* DESKTOP CARD: 3 across */
+        .reviews-gallery .review-card {
+            flex: 0 0 calc(33.333% - 1.8rem) !important; 
+            height: 180px !important; 
+            padding: 0.5rem !important; 
+        }
+
+        .reviews-gallery-container .scroll-btn.left { left: -35px !important; } 
+        .reviews-gallery-container .scroll-btn.right { right: -35px !important; }
+        
+        .review-form { 
+            margin: 0 auto 0.5rem auto !important; 
+            padding: 0.5rem 1.0rem !important; 
+            gap: 0.5rem !important;
+            max-width: 650px !important;
+        }
+        
+        .review-form textarea { height: 75px !important; }
+        .review-form p { margin-bottom: 0.5rem !important; }
+
+        /*3. MOBILE OVERRIDES (1 Card + Safe Buttons) */
+        @media (max-width: 768px) {
+            
+            html, body { 
+                height: auto !important; 
+                overflow-y: auto !important; 
+                overflow-x: hidden !important;
+            }
+
+            .reviews-section { 
+                height: auto !important; 
+                min-height: 100vh;
+                display: block !important; 
+                overflow: visible !important;
+                padding-top: 60px !important; 
+                padding-bottom: 150px !important; 
+            }
+
+            .main-footer {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .reviews-gallery-container {
+                padding: 0 55px !important; 
+                box-sizing: border-box !important;
+                width: 100% !important;
+            }
+
+            .reviews-gallery .review-card {
+                flex: 0 0 100% !important;
+                width: 100% !important;
+                height: auto !important;
+                scroll-snap-align: center !important;
+                margin: 0 !important; 
+            }
+            
+            .reviews-gallery {
+                display: flex !important;
+                overflow-x: auto !important;
+                scroll-snap-type: x mandatory !important;
+                gap: 0 !important; 
+                padding-bottom: 10px;
+            }
+
+            .reviews-gallery-container .scroll-btn.left {
+                left: 5px !important; 
+                width: 40px !important; 
+                z-index: 100 !important;
+            }
+
+            .reviews-gallery-container .scroll-btn.right {
+                right: 5px !important; 
+                width: 40px !important; 
+                z-index: 100 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+    <div class="nav-logo">ODAN</div>
+    
+    <ul id="main-nav-list"> 
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="services.html">SERVICES</a></li> 
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="reviews.html">REVIEWS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+</nav>
+
+    <section class="reviews-section">
+        <h2 class="reveal">Client Reviews</h2>
+
+        <div class="reviews-gallery-container reveal">
+            <button class="scroll-btn left" id="reviews-scroll-left">&#10094;</button>
+
+            <div class="reviews-gallery" id="reviews-gallery-track">
+                
+                <div class="review-card">
+                    <p>"Jordan delivered an excellent website for our veterinary clinic. The design is clean and user-friendly."</p>
+                    <h4>- Dr. Sarah Lee, Vet Clinic</h4>
+                </div>
+
+                <div class="review-card">
+                    <p>"Very professional and easy to work with. He understood the requirements for the karaoke system immediately."</p>
+                    <h4>- Tech Lead, NextGenPH</h4>
+                </div>
+
+                <div class="review-card">
+                    <p>"Great attention to detail on the UI/UX design. The interface is intuitive and looks modern."</p>
+                    <h4>- Mark Davis, Designer</h4>
+                </div>
+
+                <div class="review-card">
+                    <p>"The Front-End development skills are top notch. Highly recommended for responsive web projects."</p>
+                    <h4>- Alex Johnson, Developer</h4>
+                </div>
+
+            </div>
+
+            <button class="scroll-btn right" id="reviews-scroll-right">&#10095;</button>
+        </div>
+
+        <form id="review-form" class="review-form reveal">
+            <p style="text-align: center; margin-bottom: 0.5rem; font-size: 1.1em; color: #4a90e2; margin-top: 0;">
+                Want to create a review?
+            </p>
+            
+            <input type="text" id="reviewer-name" placeholder="Your Name or Email" required />
+            <textarea id="review-message" rows="3" placeholder="Write your review..." required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+
+    </section>
+
+    <div class="main-footer" id="mainFooter">
+    <div class="copyright">
+        &copy; 2025 Jordan Mike O. Rebanal. All rights reserved.
+    </div>
+    <div class="social-icons">
+        
+        <a href="https://www.facebook.com/share/1CfyB1ykXs/" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        
+        <a href="https://www.instagram.com/just_odann?igsh=dXBzaDlxMzNnaWQz" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        
+        <a href="mailto:jordanrebanal@gmail.com" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+        
+        <a href="https://www.tiktok.com/@just_odann?_r=1&_t=ZS-92BqxtZHK91" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+</div>
+
+<!-- Add these BEFORE your script.js -->
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyABC123XYZ456DEF789", 
+        authDomain: "odan-714b5.firebaseapp.com",
+        databaseURL: "https://odan-714b5-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "odan-714b5",
+        storageBucket: "odan-714b5.appspot.com",
+        messagingSenderId: "123456789012",
+        appId: "1:123456789012:web:abcdef123456"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    window.db = firebase.database();
+    
+    console.log("✅ Firebase initialized:", window.db);
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

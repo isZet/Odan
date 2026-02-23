@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Mike O. Rebanal - Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /*FOOTER STYLES (Kept inline)*/
+        .main-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #4a90e2, #7ec8e3); 
+            color: white;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0.8rem 3rem;
+            box-sizing: border-box;
+            z-index: 2000; 
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1); 
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .social-icons a {
+            color: white;
+            margin-left: 1.2rem;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: #e6f7ff; 
+            transform: scale(1.2);
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+        }
+
+        body {
+            padding-bottom: 80px; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-logo">ODAN</div>
+        <ul id="main-nav-list"> 
+            <li><a href="index.html#home">HOME</a></li>
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="services.html" class="active">SERVICES</a></li> 
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="reviews.html">REVIEWS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section id="services" class="services-section">
+        <h2 class="reveal">What Will I Be Able to Offer You?</h2>
+        <p class="subheading reveal">Innovative solutions for your digital presence.</p>
+
+        <div class="service-horizontal-list">
+            
+            <div class="service-cards-list">
+                
+                <div class="service-card reveal" data-service="prototyping">
+                    <i class="fa-brands fa-figma"></i>
+                    <h4>Prototyping & UI/UX Design</h4>
+                    <p>Figma-based high-fidelity design systems and user journey flows.</p>
+                </div>
+                
+                <div class="service-card reveal" data-service="website">
+                    <i class="fa-solid fa-code"></i>
+                    <h4>Front-End Website Development</h4>
+                    <p>Responsive, modern websites built with HTML, CSS, and JavaScript.</p>
+                </div>
+
+                <div class="service-card reveal" data-service="system">
+                    <i class="fa-solid fa-server"></i>
+                    <h4>Information System Solutions</h4>
+                    <p>Developing internal systems and management tools for businesses.</p>
+                </div>
+
+                <div class="service-card reveal" data-service="application">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h4>Mobile/Web Application Concepts</h4>
+                    <p>Designing and building the front-end for companion apps and web applications.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="services-content-wrapper">
+           <div class="service-details-pane" id="serviceDetailsPane">
+    
+    <div id="prototyping-details" class="content-detail">
+        <h3>Prototyping & UI/UX Design (Figma)</h3>
+        <p>I specialize in translating abstract ideas into tangible, high-fidelity, interactive prototypes using industry-standard tools like Figma and Adobe XD. This service covers the entire user experience lifecycle.</p>
+        <p><strong>Key Technologies:</strong> Figma, User Story Mapping, Design Thinking Principles.</p>
+        
+        <h4>Related Works:</h4>
+        <div class="work-images-container">
+             <div class="work-image-item">
+                 <img src="Veterinary App.png" alt="Figma Prototype">
+                 <p class="img-caption">High-Fidelity Mobile App</p>
+             </div>
+             <div class="work-image-item">
+                 <img src="Daet Premium App.png" alt="Figma Prototype">
+                 <p class="img-caption">Component Library</p>
+             </div>
+        </div>
+    </div>
+
+    <div id="website-details" class="content-detail">
+        <h3>Front-End Website Development</h3>
+        <p>I build responsive, modern, and high-performing websites focused on delivering exceptional speed and accessibility. I exclusively handle the user-facing side.</p>
+        <p><strong>Key Technologies:</strong> HTML5, CSS3/SCSS, JavaScript (ES6+), Responsive Design.</p>
+        
+        <h4>Related Works:</h4>
+        <div class="work-images-container">
+            <div class="work-image-item">
+                <img src="Personal Website.png" alt="Portfolio Site"> 
+                <p class="img-caption">Personal Portfolio</p>
+            </div>
+            <div class="work-image-item">
+                <img src="KhoVet.jpg" alt="Veterinary Site">
+                <p class="img-caption">Veterinary Page</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="system-details" class="content-detail">
+        <h3>Information System Solutions</h3>
+        <p>My contribution to information systems focuses entirely on the design and development of user-friendly management dashboards and internal system interfaces.</p>
+        <p><strong>Key Technologies:</strong> UI/UX for Dashboards, Data Visualization, System Flow Diagrams.</p>
+        
+        <h4>Related Works:</h4>
+        <div class="work-images-container">
+            <div class="work-image-item">
+                <img src="KaraokeDeliverySystem.png" alt="Dashboard UI">
+                <p class="img-caption">Karaoke Delivery System</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="application-details" class="content-detail">
+        <h3>Mobile/Web Application Concepts</h3>
+        <p>This service involves designing and constructing the complete user interface and experience for both mobile and web applications.</p>
+        <p><strong>Key Technologies:</strong> Mobile-First Design, Frameworks (e.g., React Native concepts).</p>
+        
+        <h4>Related Works:</h4>
+        <div class="work-images-container">
+            <div class="work-image-item">
+                <img src="Veterinary App1.png" alt="Mobile App UI">
+                <p class="img-caption">Veterinary App</p>
+            </div>
+            <div class="work-image-item">
+                <img src="Dementra App.png" alt="Mobile App UI">
+                <p class="img-caption">Dementra App</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+    </section>
+
+    <div class="main-footer">
+        <div class="copyright">
+            &copy; 2025 Jordan Mike O. Rebanal. All rights reserved.
+        </div>
+        <div class="social-icons">
+            <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:your-email@gmail.com" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>

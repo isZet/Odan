@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Mike O. Rebanal - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /*FOOTER STYLES*/
+        .main-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #4a90e2, #7ec8e3); 
+            color: white;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0.8rem 3rem;
+            box-sizing: border-box;
+            z-index: 2000; 
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1); 
+            font-size: 0.9rem;
+            font-weight: 500;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-out;
+        }
+
+        .main-footer.show {
+            transform: translateY(0);
+        }
+
+        .social-icons a {
+            color: white;
+            margin-left: 1.2rem;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: #e6f7ff; 
+            transform: scale(1.2);
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+        }
+
+        .about-section {
+            padding-bottom: 70px; 
+        }
+
+        @media (max-width: 768px) {
+            .main-footer {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+    <div class="nav-logo">ODAN</div>
+    
+    <ul id="main-nav-list"> 
+        <li><a href="index.html">HOME</a></li> 
+        <li><a href="#about">ABOUT</a></li> 
+        <li><a href="services.html">SERVICES</a></li> 
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="reviews.html">REVIEWS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+</nav>
+
+    <section class="hero-section"> 
+        <img src="PersonalWebsite.png" class="retro-border" alt="Retro Tech Border">
+
+        <h1>Jordan Mike O. Rebanal</h1>
+        <p class="subheading">A college student, lifelong learner<br>and emerging life adventurer.</p>
+
+        <div class="profile-pic-wrapper">
+            <img src="profile.jpg" class="profile-pic" alt="Profile Picture">
+            <div class="blue-star">*</div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2 class="reveal">Getting to Know Me More!</h2>
+
+        <p class="intro-paragraph reveal">I'm Jordan Mike O. Rebanal, an ambitious Information Technology student specializing in <strong>Front-End Developing</strong>. I am currently a second-year student at Camarines Norte State College. My academic background, including graduating with high honors from Senior High School, reflects my strong commitment to excellence and continuous learning. I am passionate about utilizing my skills in both programming and graphic design to build engaging and intuitive digital experiences.</p>
+
+        <div class="about-grid">
+            
+            <div class="grid-card summary-card reveal">
+                <h3>👋 Jordan Mike O. Rebanal</h3>
+                <p>I am a passionate and emerging <strong>Front-End Developer</strong>, 21 years old, and currently a <strong>second-year student</strong> pursuing a <strong>Bachelor of Science in Information Technology</strong> at Camarines Norte State College.</p>
+                <div class="info-tag">
+                    <span class="tag-item">📍 Daet, Camarines Norte</span>
+                    <span class="tag-item">🗓️ Born in November 25, 2003</span>
+                </div>
+            </div>
+
+            <div class="grid-card expertise-card reveal">
+                <h3>🛠️ Skills & Focus</h3>
+                <div class="skills-list">
+                    <span class="skill-item">Front-End Development</span>
+                    <span class="skill-item">Graphics Design</span>
+                    <span class="skill-item">Game Development (Interest)</span>
+                    <span class="skill-item">Video Editing</span>
+                    <span class="skill-item">Power Point Design</span>
+                    <span class="skill-item">Prototype Design</span>
+
+                </div>
+            </div>
+
+            <div class="grid-card education-card reveal">
+                <h3>🎓 Education & Honors</h3>
+                <h4>Camarines Norte State College (Current)</h4>
+                <p class="school-detail">(College of Computing and Multimedia Studies)</p>                
+                <p class="school-detail">Bachelor of Science in Information Technology</p>
+                <h4>Panghulo National High School</h4>
+                <p class="school-detail">Senior High School, Graduated With High Honors</p>
+                
+                <h4>Recent Achievements:</h4>
+                <ul class="achievement-list">
+                    <li>Finalist, NextGenPH 2025 Competition</li>
+                    <li>Competed in CNSC Explore 2025</li>
+                </ul>
+            </div>
+            
+         <div class="grid-card projects-card reveal">
+    <h3>🚀 Select Accomplished Projects</h3>
+    
+    <ul class="hobbies-list"> 
+        <li>
+            <h4>System for Vehicle Registration Pass (Web/App)</h4>
+            <p class="project-status">Group Project</p>
+            <p>A comprehensive digital system designed to streamline and automate the process of registering and tracking vehicle passes and permits across multiple platforms.</p>
+        </li>
+        <li>
+            <h4>Veterinary Clinic Website & Companion App Prototype</h4>
+            <p class="project-status">Group Project</p>
+            <p>Designed the front-end interface and user experience flow for a full-service veterinary clinic, including a client-facing companion mobile application for booking and reminders.</p>
+        </li>
+        <li>
+            <h4>System for Karaoke Delivery Service</h4>
+            <p class="project-status">Individual Project</p>
+            <p>A web and mobile-friendly system enabling customers to easily browse, book, and schedule delivery and pickup services for portable karaoke equipment.</p>
+        </li>
+        <li>
+            <h4>HCI Prototype: Smart Anklet and Mobile Application</h4>
+            <p class="project-status">Group Project</p>
+            <p>Developed the Human-Computer Interaction (HCI) prototype for a smart wearable anklet, including the associated mobile application UI for monitoring and data visualization.</p>
+        </li>
+    </ul>
+</div>
+
+        </div> 
+        
+<div class="hobbies-container">
+    <div class="grid-card hobbies-card reveal">
+        <h3>🎮 Hobbies & Interests</h3>
+        <ul class="hobbies-list">
+            <li>
+                <h4>Mobile Gaming</h4>
+                <p>Story: "Mobile gaming, primarily MOBA titles like Mobile Legends or League of Legends, isn't just about fun; it’s a rigorous exercise in quick decision-making, strategic coordination, and resource management. I enjoy the pressure of working collaboratively under time constraints, which sharpens my ability to solve complex problems efficiently—a skill directly transferable to debugging and front-end development."</p>
+            </li>
+            <li>
+                <h4>Dancing</h4>
+                <p>Story: "Dancing is my mental reset button and a profound lesson in discipline. It requires complex muscle memory, precise timing, and the ability to seamlessly connect many individual movements into one fluid sequence. Much like coding requires precise syntax and careful orchestration of functions, dancing trains me to focus on detail and rhythm, helping me maintain clarity and energy during long coding sessions."</p>
+            </li>
+            <li>
+                <h4>Watching Movies</h4>
+                <p>Story: "I enjoy watching movies not just for entertainment, but to deeply understand compelling narratives, character arcs, and cinematic pacing. Analyzing how a story holds attention and conveys emotion directly informs my approach to UX/UI design, ensuring that the user experience I build is not only functional and intuitive but also captivating, logical, and easy for users to follow from start to finish."</p>
+            </li>
+            <li>
+                <h4>Playing Lyre</h4>
+                <p>Story: "Playing the lyre teaches patience and precision. Mastering a new piece means breaking it down into smaller, manageable components, practicing them until perfect, and then integrating them into a cohesive whole. This methodical process mirrors my development workflow: tackling large projects by segmenting them into modular components (HTML, CSS, JavaScript) and ensuring each element works flawlessly before deployment."</p>
+            </li>
+        </ul>
+    </div>
+</div>
+    </section>
+
+    <div class="main-footer" id="mainFooter">
+    <div class="copyright">
+        &copy; 2025 Jordan Mike O. Rebanal. All rights reserved.
+    </div>
+    <div class="social-icons">
+        
+        <a href="https://www.facebook.com/share/1CfyB1ykXs/" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        
+        <a href="https://www.instagram.com/just_odann?igsh=dXBzaDlxMzNnaWQz" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        
+        <a href="mailto:jordanrebanal@gmail.com" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+        
+        <a href="https://www.tiktok.com/@just_odann?_r=1&_t=ZS-92BqxtZHK91" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+</div>
+
+<script>
+    const mainFooter = document.getElementById('mainFooter');
+    const aboutSection = document.getElementById('about');
+    const navLinks = document.querySelectorAll('#main-nav-list a');
+    const sections = document.querySelectorAll('section');
+
+    function debounce(func, delay) {
+        let timeout;
+        return function() {
+            const context = this;
+            const args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(context, args), delay);
+        };
+    }
+
+    function handleFooterVisibility() {
+        if (!aboutSection || !mainFooter) return;
+
+        const aboutTop = aboutSection.getBoundingClientRect().top;
+        
+        if (aboutTop <= window.innerHeight - 50) {
+            mainFooter.classList.add('show');
+        } else {
+            mainFooter.classList.remove('show');
+        }
+    }
+
+    function setActiveLink() {
+        let currentActiveId = 'home'; 
+        
+        const offset = 75; 
+
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const section = sections[i];
+            
+            if (window.scrollY >= section.offsetTop - offset) {
+                if (section.id) {
+                    currentActiveId = section.id;
+                }
+                break; 
+            }
+        }
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            
+            const linkHref = link.getAttribute('href');
+
+            if (currentActiveId === 'home') {
+                 if (linkHref.endsWith('index.html') || linkHref.endsWith('index.html#home') || linkHref === '#') {
+                    link.classList.add('active');
+                 }
+            } 
+            else if (linkHref.includes('#' + currentActiveId)) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    const debouncedHandleFooterVisibility = debounce(handleFooterVisibility, 10);
+    
+    window.addEventListener('scroll', () => {
+        handleFooterVisibility(); 
+        debounce(setActiveLink, 50)(); 
+    });
+
+    window.addEventListener('load', () => {
+        handleFooterVisibility();
+        setActiveLink(); 
+    });
+    
+    document.addEventListener('DOMContentLoaded', setActiveLink);
+</script>
+
+<script src="script.js"></script>
